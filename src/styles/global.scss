@@ -1,1 +1,12 @@
-@import "../../node_modules/modern-normalize/modern-normalize.css";
+@import "reboot";
+
+:root {
+    --font-family-base: #{$font-family-base};
+    --font-family-serif: #{$font-family-serif};
+    --font-family-sans-serif: #{$font-family-sans-serif};
+    --default-font-size: #{$default-font-size};
+    --default-line-height: #{$default-line-height};
+    --font-weight-normal: #{$font-weight-normal};
+    --font-weight-bold: #{$font-weight-bold};
+    --font-weight-light: #{$font-weight-light};
+}
