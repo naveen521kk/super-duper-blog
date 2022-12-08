@@ -90,5 +90,5 @@ jobs:
 
       - name: Deploy
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        run: wrangler pages publish --project-name=super-super-blog public/
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: wrangler pages publish public/ --project-name=super-super-blog
