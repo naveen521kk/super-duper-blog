@@ -23,5 +23,5 @@ export const onRequest: PagesFunction<Env> = async context => {
     }
     const newValue = (parseInt(value) + 1).toString();
     await context.env.KV.put(slug, newValue);
-    return new Response(value, {status: 200});
+    return new Response(newValue, {status: 200});
 };
