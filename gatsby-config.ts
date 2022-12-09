@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
         `gatsby-plugin-sass`,
         "gatsby-plugin-image",
         "gatsby-plugin-sitemap",
-        "gatsby-plugin-mdx",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         {
@@ -31,10 +30,11 @@ const config: GatsbyConfig = {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "pages",
-                path: "./src/pages/"
+                path: "./contents/"
             },
-            __key: "pages"
-        }
+            __key: "contents"
+        },
+        "gatsby-plugin-mdx",
     ]
 };
 
