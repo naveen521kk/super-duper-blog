@@ -37,6 +37,11 @@ export const SEO = ({
     return (
         <>
             <title>{seo.title}</title>
+
+            {/* Add a favicon */}
+            <link rel="alternate icon" type="image/ico" href="/favicon.ico" />
+            <link rel="icon" type="image/svg+xml" href="/logo-favicon.svg" />
+
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
 
