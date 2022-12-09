@@ -1,6 +1,6 @@
 import React from "react";
-import {graphql, PageProps} from "gatsby";
-import {Link} from "gatsby";
+import {graphql, PageProps, HeadFC, Link} from "gatsby";
+import {SEO} from "../components/seo";
 import * as styles from "../styles/posts.module.scss";
 
 export default function Posts({data}: PageProps<Queries.PostsQuery>) {
@@ -44,3 +44,10 @@ export const query = graphql`
         }
     }
 `;
+
+export const Head: HeadFC = () => (
+    <SEO
+        title="Blog posts"
+        description="This displays the list of all posts."
+    />
+);
