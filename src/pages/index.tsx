@@ -9,7 +9,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className={index_css.container}>
                 <h1>Hi, I'm John.<span className={index_css.wave_emoji}>👋</span></h1>
                 <p>
-                    check out my:<a href="/posts">posts</a>
+                    Check out my <a href="/posts">posts</a>
                 </p>
             </div>
         </main>
