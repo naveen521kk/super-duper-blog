@@ -1,9 +1,9 @@
-const path = require("path")
-const postTemplate = path.resolve(`./src/templates/post.jsx`)
+import path from "path"
+
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-
+  const postTemplate = path.resolve(`./src/templates/post.tsx`)
   const result = await graphql(`
     query {
       allMdx {
