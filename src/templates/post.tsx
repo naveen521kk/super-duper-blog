@@ -1,10 +1,9 @@
 import React from "react";
-import {graphql} from "gatsby";
 import {MDXProvider} from "@mdx-js/react";
-import {Link} from "gatsby";
+import {Link, HeadFC, graphql} from "gatsby";
+import {SEO} from "../components/seo";
 
 const shortcodes = {Link}; // Provide common components here
-
 
 export default function PageTemplate({
     data,
@@ -22,11 +21,26 @@ export default function PageTemplate({
 }
 
 export const query = graphql`
-    query PageTemplate ($id: String!) {
+    query PageTemplate($id: String!) {
         mdx(id: {eq: $id}) {
             frontmatter {
                 title
+                image
+                description
+                title
+                date(formatString: "MMMM DD, YYYY")
+                slug
             }
         }
     }
 `;
+
+export const Head: HeadFC<Queries.PageTemplateQuery> = ({data}) => (
+    <SEO
+        title={data.mdx!.frontmatter!.title || ""}
+        description={data.mdx!.frontmatter!.description || ""}
+        pathname={data.mdx!.frontmatter!.slug || ""}
+        image={data.mdx!.frontmatter!.image || ""}
+        article
+    />
+);

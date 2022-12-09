@@ -8,7 +8,8 @@ export const SEO = ({
     children,
     canonical,
     pathname = "",
-    article = false
+    image,
+    article = false,
 }: {
     title?: string;
     description?: string;
@@ -16,11 +17,12 @@ export const SEO = ({
     children?: React.ReactNode;
     article?: boolean;
     canonical?: string;
+    image?: string
 }) => {
     const {
         title: defaultTitle,
         description: defaultDescription,
-        image,
+        image: defaultImage,
         siteUrl,
         twitterUsername
     } = useSiteMetadata();
@@ -28,7 +30,7 @@ export const SEO = ({
     const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: joinTwoUrls(siteUrl, image),
+        image: (image && joinTwoUrls(siteUrl, image)) || defaultImage,
         url: joinTwoUrls(siteUrl, pathname),
         twitterUsername: twitterUsername,
         canonical: canonical || joinTwoUrls(siteUrl, pathname)
