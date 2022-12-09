@@ -15,7 +15,7 @@ export default function Posts({data}: PageProps<Queries.PostsQuery>) {
                         className={styles.innerFlex}
                     >
                         <h2>
-                            <Link to={`/posts/${post.frontmatter!.slug}`}>
+                            <Link to={`${post.frontmatter!.slug}`}>
                                 {post.frontmatter!.title}
                             </Link>
                         </h2>
