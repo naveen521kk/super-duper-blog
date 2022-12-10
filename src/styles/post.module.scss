@@ -1,0 +1,9 @@
+@import "containers";
+
+.container {
+    @include generic-container;
+
+    .post-title {
+        text-align: center;
+    }
+}

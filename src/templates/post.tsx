@@ -2,6 +2,7 @@ import React from "react";
 import {MDXProvider} from "@mdx-js/react";
 import {Link, HeadFC, graphql} from "gatsby";
 import {SEO} from "../components/seo";
+import * as styles from "../styles/post.module.scss";
 
 const shortcodes = {Link}; // Provide common components here
 
@@ -13,10 +14,10 @@ export default function PageTemplate({
     children: React.ReactNode;
 }) {
     return (
-        <>
-            <h1>{data.mdx?.frontmatter?.title}</h1>
+        <div className={styles.container}>
+            <h1 className={styles.postTitle}>{data.mdx?.frontmatter?.title}</h1>
             <MDXProvider components={shortcodes}>{children}</MDXProvider>
-        </>
+        </div>
     );
 }
 
