@@ -2,6 +2,8 @@ import React from "react";
 import {MDXProvider} from "@mdx-js/react";
 import {Link, HeadFC, graphql} from "gatsby";
 import {SEO} from "../components/seo";
+import useHits from "../hooks/use-hits";
+
 import * as styles from "../styles/post.module.scss";
 
 const shortcodes = {Link}; // Provide common components here
@@ -13,6 +15,7 @@ export default function PageTemplate({
     data: Queries.PageTemplateQuery;
     children: React.ReactNode;
 }) {
+    useHits(data.mdx?.frontmatter?.slug as string);
     return (
         <div className={styles.container}>
             <h1 className={styles.postTitle}>{data.mdx?.frontmatter?.title}</h1>
