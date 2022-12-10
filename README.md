@@ -1,5 +1,7 @@
 # Super Duper Blog
 
+![](./static/banner.png)
+
 A WIP blog, have a look at this later!
 
 ## Development
