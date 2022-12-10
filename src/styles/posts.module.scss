@@ -1,5 +1,8 @@
+@import "variables";
+@import "containers";
+
 .container {
-    padding: 2rem;
+    @include generic-container;
     text-align: center;
 }
 
@@ -13,16 +16,22 @@
 
     margin: 1rem;
 
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: 0;
+    margin-right: 0;
 
     // Add a border
     border: 1px solid #ccc;
-}
 
-@media (max-width: 768px) {
-    .inner-flex {
-        margin-left: 0;
-        margin-right: 0;
+    @include for-tablet-portrait-up {
+        margin-left: 3.5em;
+        margin-right: 3.5em;
+    }
+    @include for-tablet-landscape-up {
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+    @include for-desktop-up {
+        margin-left: 10em;
+        margin-right: 10em;
     }
 }

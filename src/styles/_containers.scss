@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin generic-container {
+    padding: 1rem;
+    @include for-tablet-portrait-up {
+        padding: 2rem;
+    }
+    @include for-tablet-landscape-up {
+        padding: 3rem;
+    }
+    @include for-desktop-up {
+        padding: 4rem;
+    }
+    @include for-big-desktop-up {
+        padding: 5rem;
+    }
+}
