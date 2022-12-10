@@ -47,3 +47,33 @@ $headings-font-style: null;
 $headings-font-weight: 500;
 $headings-line-height: 1.2;
 $headings-color: null;
+
+// Breakpoints
+
+// don't actually use the below `for-phone-only` mixin, but it's here for reference
+// follow mobile first approach
+@mixin for-phone-only {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 577px) {
+        @content;
+    }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
