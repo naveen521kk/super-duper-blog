@@ -1,6 +1,6 @@
 import React from "react";
 import {useSiteMetadata} from "../hooks/use-site-metadata";
-import {joinTwoUrls} from "../utils/join-two-urls";
+import joinTwoUrls from "../utils/join-two-urls";
 
 export const SEO = ({
     title,
