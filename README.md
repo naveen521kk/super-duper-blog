@@ -14,4 +14,4 @@ A WIP blog, have a look at this later!
 WIP.
 
 ## License
-WIP.
+This project is licensed under "BSD 3-Clause License" license. See [LICENSE](./LICENSE) for more details.
