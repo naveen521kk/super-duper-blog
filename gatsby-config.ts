@@ -35,6 +35,19 @@ const config: GatsbyConfig = {
             __key: "contents"
         },
         "gatsby-plugin-mdx",
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                trackingIds: ["G-N7H4LKSXZX"],
+                gtagConfig: {
+                    anonymize_ip: true,
+                    cookie_expires: 0
+                },
+                pluginConfig: {
+                    respectDNT: true
+                }
+            }
+        }
     ]
 };
 
